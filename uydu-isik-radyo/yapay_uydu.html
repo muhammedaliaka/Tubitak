@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yapay Uydu – Kamera Saati Kalibrasyonu</title>
+<style>
+  :root { --bg: #000; --fg: #bbb; --dot: #fff; --tick: #666; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
+               font-family: system-ui, sans-serif; overflow: hidden; }
+  canvas { display: block; }
+  #bilgi { position: fixed; left: 12px; bottom: 10px; font-size: 13px; opacity: .7; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="bilgi">
+  Nokta her <b>5 s</b>'de soldan sağa bir tur atar (bilgisayar saatiyle). Büyük sayı = tur numarası (⌊t/5⌋ mod 100).
+  Telefonu ekrana sabitleyin, uydu çekimindeki ayarlarla (2–4 s pozlama) çekin. Ekran parlaklığını düşürün.
+  Önce bilgisayar saatini NTP ile eşleyin ve time.is'te farkı not edin. Tam ekran: F11.
+</div>
+<script>
+// Bilgisayar saati (Date.now, ms). Konum x = (t mod P) / P * genişlik.
+// İzin başladığı ve bittiği x değerleri pozlamanın gerçek açılış/kapanış anlarını verir;
+// hangi turda olduğumuz büyük sayıdan ve EXIF saatinden (±1 s) anlaşılır.
+const P = 5000;            // tur süresi, ms
+const c = document.getElementById('c');
+const g = c.getContext('2d');
+function boyut() { c.width = innerWidth; c.height = innerHeight; }
+addEventListener('resize', boyut); boyut();
+
+function ciz() {
+  const t = Date.now();
+  const W = c.width, H = c.height, y = H * 0.45, m = 40, L = W - 2 * m;
+  g.fillStyle = '#000'; g.fillRect(0, 0, W, H);
+  // ölçek: her 100 ms küçük, her 500 ms büyük çizgi ve etiket
+  g.strokeStyle = '#666'; g.fillStyle = '#888'; g.font = '14px monospace'; g.textAlign = 'center';
+  for (let k = 0; k <= P / 100; k++) {
+    const x = m + L * k * 100 / P, big = k % 5 === 0;
+    g.beginPath(); g.moveTo(x, y + 18); g.lineTo(x, y + (big ? 42 : 28)); g.stroke();
+    if (big) g.fillText((k / 10).toFixed(1), x, y + 60);
+  }
+  // tur numarası (5 s'de bir değişir)
+  const tur = Math.floor(t / P) % 100;
+  g.fillStyle = '#555'; g.font = 'bold 120px monospace';
+  g.fillText(String(tur).padStart(2, '0'), W / 2, H * 0.25);
+  // hareket eden nokta
+  const x = m + L * (t % P) / P;
+  g.fillStyle = '#fff'; g.beginPath(); g.arc(x, y, 5, 0, 2 * Math.PI); g.fill();
+  // yazılı saat (UTC, ms) – kısa pozlamalı denetim çekimleri için
+  const d = new Date(t);
+  g.fillStyle = '#777'; g.font = '28px monospace';
+  g.fillText(d.toISOString().slice(11, 23) + ' UTC', W / 2, H * 0.80);
+  requestAnimationFrame(ciz);
+}
+requestAnimationFrame(ciz);
+</script>
+</body>
+</html>

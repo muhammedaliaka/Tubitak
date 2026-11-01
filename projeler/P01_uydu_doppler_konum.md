@@ -3,6 +3,7 @@
 > **Tek cümle:** Alçak yörünge uydusunun radyo sinyalindeki Doppler kaymasını ucuz bir SDR ile ölçüp, önce bilinen konumdan yörüngeyi düzeltmek (Sputnik 1957), sonra yörüngeyi bilerek kendi konumumuzu bulmak (TRANSIT 1958).
 > **Aile:** Radyo/SDR · **Yazılım payı:** ~%75 · **Yeni harcama (tahmin, doğrulanmadı):** ~60–100 USD · **Yapay zekâ:** gerekmez
 > **Ayrıntı:** `fikir-havuzu-v2/DERIN_INCELEME.md` §1 ve `fikir-havuzu-v2/doppler_konum_sim.py`
+> **Güncel:** P09 ile birleştirildi ve seçildi → `uydu-isik-radyo/PLAN.md`.
 
 ## Neden ilginç
 GNSS parazitlenince ya da aldatılınca konum kaybolur. Uydu Doppler'i bağımsız ikinci bir konum kaynağıdır. Hikâyesi güçlü: ilk uydu navigasyon sistemi TRANSIT tam olarak bu fikirden doğdu (APL Technical Digest).
@@ -39,7 +40,7 @@ Uydu geçerken hoparlörde yükselip alçalan ıslık; ekranda her saniye darala
 GNSS'siz konum (TRANSIT bir donanma sistemiydi).
 
 ## Riskler
-2026'da hangi uyduların yayın yaptığı doğrulanamadı (NOAA-19 için kaynaklar çelişkili; Orbcomm OG2 durumu bulunamadı) → pilotun ilk işi. FM girişimi, kentsel ufuk, modülasyonlu sinyalde taşıyıcı kestirimi.
+**Güncelleme (1 Kas):** NOAA-15/18/19 2025'te kapatıldı (NOAA-19: 13 Ağustos 2025, NOAA); Meteor-M2-4 SatNOGS'ta "operational"; ISS 27 Ekim 2026 itibarıyla 437,800/437,825 MHz'de (ARISS); RTL-SDR V4'ün üretimi bitti, yerine V4L var. Orbcomm durumu hâlâ bulunamadı → pilotun ilk işi. FM girişimi, kentsel ufuk, modülasyonlu sinyalde taşıyıcı kestirimi.
 
 ## İlk pilot (sınav sonrası, 2 gün)
 İki geçiş kaydet, spektrogramda Doppler eğrisini çiz, frekans gürültüsünü ölç (1–10 Hz civarı → uygulanabilir).

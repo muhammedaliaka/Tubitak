@@ -2,7 +2,8 @@
 
 > *Çalışma başlığı, 14 kelime (kural: ≤15). İlk sürümdeki başlık 17 kelimeydi ve kuralı aşıyordu; düzeltildi.*
 
-> **Durum: ÇALIŞMA FİKRİ (#1), konum: İstanbul.** Alternatif: `bitki-ultrasonu/PLAN.md` (#2). Ekip 2–15 Kasım'da sınavda; ağır iş yok. **Kesin karar Kapı 0'dan (Pilot-0, 16–19 Kas) sonra, en geç 22 Kasım'da** (§11).
+> **1 Kasım güncellemesi: Ekip P01 + P09 birleşimini seçti → `../uydu-isik-radyo/PLAN.md`. Bu plan artık yedektir.**
+> **Eski durum: ÇALIŞMA FİKRİ (#1), konum: İstanbul.** Alternatif: `bitki-ultrasonu/PLAN.md` (#2). Ekip 2–15 Kasım'da sınavda; ağır iş yok. **Kesin karar Kapı 0'dan (Pilot-0, 16–19 Kas) sonra, en geç 22 Kasım'da** (§11).
 > **Hazırlanma tarihi:** 1 Kasım 2026 (İstanbul güncellemesi: 1 Kasım) · **Hedef:** TÜBİTAK 2204-A (58. dönem), son başvuru **4 Ocak 2027, 17:30**.
 > **Tema:** Fizik (buharlaşma kinetiği, nem kütle dengesi, psikrometri, yüzey yoğuşması) · **Yazılım ağırlığı:** ~%70.
 > **Çerçeve:** Yoğuşma, yapı nemi ve enerji. **Sağlık iddiası yoktur** (bkz. §13).

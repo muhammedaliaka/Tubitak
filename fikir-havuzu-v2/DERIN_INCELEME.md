@@ -89,7 +89,7 @@ Model: küresel Dünya, dairesel yörünge 750 km/45° (Orbcomm benzeri, örnek)
 ### 1.10 Riskler
 | Risk | Etki | Azaltma |
 |---|---|---|
-| **Uyduların 2026 durumu doğrulanmadı:** NOAA-19 için kaynaklar çelişkili (WMO "ömür sonu Eylül 2025 bekleniyor", başka bir ikincil kaynak "Haziran 2026'da çalışıyor"); Meteor-M2-3 bir 2025 raporunda "zayıf"; Orbcomm OG2'nin güncel durumu bulunamadı | Yüksek | **Pilotun ilk işi:** SatNOGS gözlemleri ve kendi alıcımızla hangi uyduların gerçekten duyulduğunu görmek. Amatör küp uyduların CW işaretçileri (435 MHz) yedek |
+| **Uyduların 2026 durumu doğrulanmadı** *(1 Kas güncellemesi: NOAA-15/18/19 2025'te kapatıldı, bkz. `uydu-isik-radyo/PLAN.md` §5.2)*: NOAA-19 için kaynaklar çelişkili (WMO "ömür sonu Eylül 2025 bekleniyor", başka bir ikincil kaynak "Haziran 2026'da çalışıyor"); Meteor-M2-3 bir 2025 raporunda "zayıf"; Orbcomm OG2'nin güncel durumu bulunamadı | Yüksek | **Pilotun ilk işi:** SatNOGS gözlemleri ve kendi alıcımızla hangi uyduların gerçekten duyulduğunu görmek. Amatör küp uyduların CW işaretçileri (435 MHz) yedek |
 | FM yayın girişimi (İstanbul) | Orta | FM bant durdurucu filtre |
 | Kağıthane vadisinde alçak ufuk | Orta | Çatı/okul bahçesi; maske 15–20° ile planla (benzetim 15°) |
 | Frekans kestirimi (modülasyonlu sinyalde taşıyıcı) | Orta | Dar bantlı/CW işaretçili uydular; uzun FFT; ara değerleme |

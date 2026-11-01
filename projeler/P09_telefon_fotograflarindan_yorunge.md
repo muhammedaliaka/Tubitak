@@ -1,6 +1,7 @@
 # P09 — Üç Telefon Fotoğrafından Uydu Yörüngesi: Gauss Yöntemiyle Kağıthane'den Uzay Gözetimi
 
 > **Tek cümle:** Gece gökyüzünde geçen parlak bir uydunun (ISS, Starlink, roket gövdesi) telefonla çekilmiş birkaç fotoğrafından yıldızlara göre konumunu ölçüp, Gauss'un 1801'de Ceres için kullandığı yöntemle yörüngesini hesaplamak ve TLE ile karşılaştırmak.
+> **Güncel:** P01 ile birleştirildi ve seçildi → `uydu-isik-radyo/PLAN.md`.
 > **Aile:** Optik astrometri/gök mekaniği · **Yazılım payı:** ~%80 · **Yeni harcama (tahmin):** ~10–30 USD (tripod) · **Yapay zekâ:** gerekmez
 
 ## Neden ilginç

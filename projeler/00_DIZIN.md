@@ -1,5 +1,7 @@
 # Proje Fikirleri Dizini (17 aday) — TÜBİTAK 2204-A, Fizik, Kağıthane
 
+> **Seçilen (1 Kasım):** P01 + P09 birleşimi → **`../uydu-isik-radyo/PLAN.md`** (plan, benzetim, geçiş tahmini, Pilot-0 föyü). Diğer kartlar yedek olarak duruyor.
+
 > **Tarih:** 1 Kasım 2026 · **Amaç:** Sınav haftalarında (2–15 Kas) okunup tartışılacak fikir kartları. Her kart aynı şablonda: tek cümle, neden ilginç, hipotezler, fizik, deneyler, yazılım, donanım (mevcut/yeni), yapay zekâ gerekli mi, öncül → kama, gösteri, savunma anlatısı, riskler, ilk pilot, kaynaklar.
 > **İşaretler:** *(doğrulanmadı)* = kaynağını bulamadım/okumadım; *(tahmin)* = kendi kaba hesabım; *"bulamadım"* ≠ "yok" (arama standart web aramasıyla sınırlı; Google Scholar/ULAKBİM taraması yapılmadı). **Tüm USD fiyatları tahmindir, Türkiye fiyatı/kur/gümrük doğrulanmadı.**
 
