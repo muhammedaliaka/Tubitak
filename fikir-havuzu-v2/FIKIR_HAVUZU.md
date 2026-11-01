@@ -1,5 +1,7 @@
 # Fikir Havuzu v2 — "Gerekli hissedilmeyen ama olursa avantaj sağlayan" projeler
 
+> **GÜNCELLEME (1 Kasım, ekip yanıtlarından sonra):** Proje Fizik alanında, laboratuvar aleti yok, konum Kağıthane. Sıralama değişti; finalistler ve yeni aday **H (uydu Doppler'iyle GNSS'siz konum)** için bkz. `DERIN_INCELEME.md`.
+
 > **Hazırlanma tarihi:** 1 Kasım 2026 · **Amaç:** Sınav haftalarında (2–15 Kas) *tartışılacak* aday listesi. Plan değil, menü. Karar sonrası seçilen fikir için `PLAN.md` yazılır.
 > **Dosya durumu:** Her olgu "doğrulandı / haber-özet / bulamadım / tahmin" olarak işaretlendi. **"Bulamadım", "yok" demek değildir;** aramam standart web aramasıyla sınırlıdır (Google Scholar/ULAKBİM taranmadı).
 
