@@ -143,15 +143,26 @@ STRATEJILER = [
     ("kapalı + nem alıcı (0,3 kg/h)", kapali, 0.3),
 ]
 
-# MGM 1991-2020 Ocak BÖLGE normalleri (ısı). Dış nem: VARSAYIM.
+# Dış sıcaklık: İstanbul = MGM İstanbul il sayfası, Ocak ortalaması 6,8 C
+# (ölçüm dönemi 1950-2025, 1991-2020 normali DEĞİL); diğerleri MGM 1991-2020 Ocak
+# BÖLGE normalleri. Dış nem hepsinde VARSAYIM (MGM il nemi bulunamadı).
 BOLGELER = [
+    ("İstanbul (MGM il sayfası)", 6.8, 0.78),
     ("Marmara-benzeri", 5.2, 0.80),
     ("Ege-benzeri", 6.3, 0.72),
     ("İç Anadolu-benzeri", -0.6, 0.78),
     ("Doğu Anadolu-benzeri", -4.3, 0.80),
 ]
 
-GAZ_TL_KWH = 1.11  # 10,625 TL/m3 / (10,6 kWh/m3 * 0,9) -- Nisan 2026 tarifesi, DOĞRULA
+# Gaz birim maliyeti. ESKİ değer 1,11 TL/kWh BOTAŞ toptan fiyatıydı (10,625 TL/m3;
+# vergi ve dağıtım bedeli YOK) -> aboneye yansıyan maliyeti olduğundan düşük gösteriyordu.
+# Haberlerde vergiler (ÖTV, KDV, SKB) dahil kademe-1 konut fiyatı 16,23-17,88 TL/m3
+# (Nisan 2026 tarifesi; kaynaklar birbirini tutmuyor, DOĞRULANMADI: abone faturasından
+# veya İGDAŞ/BOTAŞ tablosundan alınacak). Yakıt ısıl değeri 10,6 kWh/m3 ve kazan verimi
+# 0,9 KABUL (DOĞRULA).
+GAZ_TL_M3 = (16.23, 17.88)
+GAZ_KWH_M3, KAZAN_VERIM = 10.6, 0.9
+GAZ_TL_KWH = tuple(p / (GAZ_KWH_M3 * KAZAN_VERIM) for p in GAZ_TL_M3)  # ~1,70-1,87
 
 
 def main():
@@ -161,14 +172,15 @@ def main():
     for ad, T_out, rh_out in BOLGELER:
         print(f"=== {ad}: dış {T_out:+.1f} C, dış BN {rh_out*100:.0f}% (nem varsayım) ===")
         print(f"{'strateji':34s} {'kuruma(h)':>9s} {'tepe BN':>8s} {'BN>60 (h)':>9s} "
-              f"{'yoğuşma(h) f.65/.80':>20s} {'ek ısı kaybı kWh':>16s} {'TL':>5s}")
+              f"{'yoğuşma(h) f.65/.80':>20s} {'ek ısı kaybı kWh':>16s} {'TL (alt-üst)':>13s}")
         for ad_s, fn, dh in STRATEJILER:
             r = simulate(T_in, T_out, rh_out, fn, dehum_kg_h=dh)
             dry = f"{r['dry_h']:.1f}" if r["dry_h"] else ">24"
             k65, k80 = list(F_RSI.keys())
             cond = f"{r['h_si100'][k65]:.1f}/{r['h_si100'][k80]:.1f}"
+            tl = f"{r['extra_vent_kwh']*GAZ_TL_KWH[0]:.1f}-{r['extra_vent_kwh']*GAZ_TL_KWH[1]:.1f}"
             print(f"{ad_s:34s} {dry:>9s} {r['peak_rh']*100:7.0f}% {r['h_rh60']:9.1f} "
-                  f"{cond:>20s} {r['extra_vent_kwh']:16.1f} {r['extra_vent_kwh']*GAZ_TL_KWH:5.1f}")
+                  f"{cond:>20s} {r['extra_vent_kwh']:16.1f} {tl:>13s}")
         print()
 
 

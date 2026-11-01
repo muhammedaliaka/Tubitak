@@ -1,7 +1,9 @@
-# Çamaşır–Nem Dengesi: Asılı Çamaşırı Ölçülen Nem Kaynağı Olarak Kullanarak Türk Konutlarında Havalandırma ve Yoğuşma Riskini Tahmin Etme
+# Çamaşır–Nem Dengesi: Asılı Çamaşırı Ölçülen Nem Kaynağı Yaparak İstanbul Konutlarında Yoğuşma Riskini Tahmin Etme
 
-> **Durum: ANA ADAY (#1).** Alternatif: `bitki-ultrasonu/PLAN.md` (#2). Fikir en geç **7 Kasım**'da kesinleşmeli.
-> **Hazırlanma tarihi:** 1 Kasım 2026 · **Hedef:** TÜBİTAK 2204-A (58. dönem), son başvuru **4 Ocak 2027, 17:30**.
+> *Çalışma başlığı, 14 kelime (kural: ≤15). İlk sürümdeki başlık 17 kelimeydi ve kuralı aşıyordu; düzeltildi.*
+
+> **Durum: ÇALIŞMA FİKRİ (#1), konum: İstanbul.** Alternatif: `bitki-ultrasonu/PLAN.md` (#2). Ekip 2–15 Kasım'da sınavda; ağır iş yok. **Kesin karar Kapı 0'dan (Pilot-0, 16–19 Kas) sonra, en geç 22 Kasım'da** (§11).
+> **Hazırlanma tarihi:** 1 Kasım 2026 (İstanbul güncellemesi: 1 Kasım) · **Hedef:** TÜBİTAK 2204-A (58. dönem), son başvuru **4 Ocak 2027, 17:30**.
 > **Tema:** Fizik (buharlaşma kinetiği, nem kütle dengesi, psikrometri, yüzey yoğuşması) · **Yazılım ağırlığı:** ~%70.
 > **Çerçeve:** Yoğuşma, yapı nemi ve enerji. **Sağlık iddiası yoktur** (bkz. §13).
 
@@ -46,10 +48,29 @@ Yaptığım aramada (standart web araması) Türk konutlarında asılı çamaş�
 ### 3.3 Türkiye'ye özgü parametreler
 - **Çamaşır makinesi:** Perakende "çok satan" listelerinde 9–10 kg, 1000–1200 devir yaygın (resmî pazar verisi değil). AB etiketi örnekleri: kalan nem (RMC = su kütlesi / kuru pamuk kütlesi) %50–54, 1.150–1.400 devirde (Electrolux, Beko, Miele). **5 kg kuru yük × %52 ≈ 2,6 L su**. Glasgow Sanat Okulu da yük başına yaklaşık 2 L bildirir.
 - **İklim:** MGM 1991–2020 Ocak bölge normalleri: Marmara 5,2 °C, Ege 6,3 °C, Akdeniz 7,5 °C, İç Anadolu −0,6 °C, Doğu Anadolu −4,3 °C, Türkiye ortalaması 2,9 °C. **İl bazlı sıcaklık ve nem ile Karadeniz değeri doğrulanmadı;** MGM il istatistiklerinden alınacak.
+- **İstanbul iklimi (ekibin bulunduğu il):** MGM İstanbul il sayfası: Ocak ortalama sıcaklık **6,8 °C**, Şubat 6,9 °C (ortalama en düşük 4,2 °C); **ölçüm dönemi 1950–2025, yani 1991–2020 normali değil**, istasyon sayfada belirtilmemiş. **İstanbul'un aylık oransal nemi bulamadım**; modelde dış BN %78 varsayım (duyarlılık §6).
 - **TS 825 derece-gün bölgeleri:** Antalya 1., İstanbul 2., Elazığ 3., Kayseri 4. bölge (METU çalışması). Diğer illerin bölgesi doğrulanmadı.
 - **Yoğuşma standardı:** ISO 13788:2012 yüzey sıcaklığı/küf ölçütü için basitleştirilmiş yöntemler verir. **Türkiye'deki karşılığının (TS EN ISO 13788) numarası ve TS 825 ile ilişkisi doğrulanmadı.**
-- **Enerji fiyatları (Nisan 2026, haber aktarımı; Kasım 2026'da değişmiş olabilir):** doğalgaz konut kademeli tarife 1. kademe 10,625 TL/m³, 2. kademe 18 TL/m³; elektrik 100 kWh için 323,8 TL (≈ 3,2 TL/kWh). **EPDK ve BOTAŞ'tan güncel tarife alınmalı.** Modelde ısı maliyeti için 1,11 TL/kWh kullanıldı (10,625 TL/m³ ÷ (10,6 kWh/m³ × 0,9 verim)).
+- **Enerji fiyatları (haber aktarımı):** BOTAŞ konut kademeli tarifesi, 4 Nisan 2026'dan beri: 1. kademe 10,625 TL/m³, 2. kademe 18 TL/m³ **(BOTAŞ toptan fiyatı; vergi ve dağıtım bedeli yok)**. Aboneye yansıyan fiyat (ÖTV, KDV, sistem kullanım bedeli dahil) haberlerde 1. kademe için **16,23–17,88 TL/m³** (Ankara için 16,84), 2. kademe için ~25,7–26,1 TL/m³ olarak geçiyor; kaynaklar birbirini tutmuyor, bölge ve ay farkı olabilir. Elektrik (Nisan 2026): 100 kWh için 323,8 TL (≈ 3,2 TL/kWh).
+  - **DÜZELTME:** İlk sürümde ısı maliyeti için 1,11 TL/kWh kullanmıştım; bu *toptan* fiyattı ve abone maliyetini ~%35–40 düşük gösteriyordu. Güncel hesap: 16,23–17,88 TL/m³ ÷ (10,6 kWh/m³ × 0,9) ≈ **1,70–1,87 TL/kWh**. Isıl değer (10,6) ve kazan verimi (0,9) **kabuldür**, doğrulanacak.
+  - **İstanbul kasım 2026 limiti:** BOTAŞ konut limiti Kasım için 136,01 m³, Aralık için 259,35 m³ (30 Ekim 2026 haberleri); limiti aşan abonenin o aydaki *tüm* tüketimi 2. kademeden hesaplanır. Çamaşır başına ek ısı kaybı ~0,3–0,6 m³ olduğundan limiti tek başına etkilemez, ama limite yakın evlerde 2. kademe fiyatıyla maliyet ~%50 artar.
+  - **Güncel fiyatı abone faturasından (ya da İGDAŞ/BOTAŞ tablosundan) alın;** Kasım 2026 için yeni birim fiyat açıklaması bulamadım.
 - **Konut tipleri:** Apartman, cam balkon, kombi/kalorifer, soba; 2000 öncesi yalıtımsız binalar. Deney evlerinde bu bilgiler envanterlenecek (§8, E0).
+
+### 3.4 İstanbul odağı (ekibin konumu)
+
+| Veri | Durum |
+|---|---|
+| Ocak ortalama sıcaklığı 6,8 °C (1950–2025, MGM il sayfası) | Doğrulandı (sayfa okundu); 1991–2020 normali değil |
+| Ocak oransal nemi | **Bulunamadı;** %78 varsayım. Pilot-0'da kendi termo-higrometrenizle dış (balkon) nemi de ölçün |
+| TS 825 bölgesi | 2. bölge (METU çalışması) |
+| Hane büyüklüğü | İstanbul 3,09 kişi (TÜİK, haber aktarımı); **İstanbul toplam hane sayısını bulamadım** |
+| Bina stoku | 2000 ve öncesi yapılan **818 binden fazla** bina; bunların 264 bini 1980 öncesi (İBB–Kandilli 2020 deprem projesi, 15.02.2023 haberi). Toplam bina sayısı o kaynakta yok; yaygın aktarılan "~%70" oranı bir özetten geliyor, **doğrulanmadı.** "2000 öncesi = yalıtımsız" varsayımı yapılmamalı; **yalıtım durumuna dair kaynak bulamadım,** her evde ölçülecek (f_Rsi). |
+| Doğalgaz | Kasım limiti 136,01 m³, Aralık 259,35 m³ (BOTAŞ, 30.10.2026 haberi) |
+
+**İstanbul'a özgü hipotez (model çıktısına göre, ölçümle sınanmalı):** Kapalı oda bütün senaryolarda uzun süre yoğuşma üretir; sürekli aralık pencere bunu her senaryoda önler ama pahalıdır (~9–10 TL/yük). "Her saat 10 dk aç" gibi ucuz bir kural merkez parametrelerde yoğuşmayı sıfırlar, ancak hızlı kuruma/düşük tampon kabullerinde 2–5 saat yoğuşma kalır (§6.1). Yani **İstanbul'da ucuz kuralın yeterli olup olmadığı, her evin α, β ve f_Rsi değerlerine bağlıdır**; "tek kural herkese uymaz" önermesi ölçümle sınanacaktır.
+
+**Kapsam notu:** Ekip tüm veriyi İstanbul'da toplayacak. Rapor, sonuçları "İstanbul konutları" için iddia eder; Türkiye geneli için yalnızca modelin iklim girdisini değiştirerek yapılan *senaryo* analizi (§6 alt tablo) verilir, ölçülmüş genelleme iddia edilmez.
 
 ---
 
@@ -98,30 +119,43 @@ Havalandırmanın ek ısı kaybı: Q = 0,34·V·ΔACH·(T_iç − T_dış) [W] (
 
 ## 6. Ön model sonuçları (İLLÜSTRATİF; ölçüm değildir)
 
-`sim_nem_dengesi.py` (oda 30 m³, 5 kg kuru yük, %52 kalan nem, 20 °C iç sıcaklık, 2,6 L su). Dış sıcaklık = MGM bölge normali; **dış nem ve diğer parametreler varsayım.** Taban BN'si %62 (G_diğer=0,05 kg/h kabulü ile).
+`sim_nem_dengesi.py` (oda 30 m³, 5 kg kuru yük, %52 kalan nem, 20 °C iç sıcaklık, 2,6 L su). **Dış nem, α, β, G_diğer ve f_Rsi varsayımdır;** dış sıcaklık İstanbul için MGM il sayfasından (6,8 °C, 1950–2025), diğer bölgeler için MGM 1991–2020 bölge normalinden. Isı kaybı TL'si 1,70–1,87 TL/kWh aralığıyla (vergili abone fiyatı, §3.3; **doğrulanmadı**) hesaplandı. Taban BN'si %65 (İstanbul, G_diğer=0,05 kg/h kabulü ile).
+
+### 6.1 İstanbul (ana senaryo)
+
+| Strateji | Kuruma (h) | Tepe BN | BN>%60 (h) | Yoğuşma (h) f=.65 / .80 | Ek ısı kaybı |
+|---|---|---|---|---|---|
+| Pencere kapalı (ACH 0,3) | >24 | %93 | 24,0 | 22,6 / 20,2 | 0 |
+| Pencere aralık, sürekli (ACH 2) | 9,1 | %65 | 8,3 | 0 / 0 | 5,5 kWh ≈ 9,3–10,3 TL |
+| Her saat 10 dk tam aç | 11,1 | %73 | 12,1 | 0 / 0 | 3,1 kWh ≈ 5,2–5,8 TL |
+| Kapalı + nem alıcı (0,3 kg/h) | 8,5 | %65 | 3,5 | 0 / 0 | elektrik ayrı |
+
+**İstanbul duyarlılık (ACH, α, β, G_diğer, dış nem değiştirildi):**
+- **Sağlam sonuç 1:** Kapalı odada tepe BN **%86–95**, yoğuşma (f=.65) **18–24 saat**; dış nem %70–85 ve G_diğer 0,02–0,05 aralığında da tepe %88–94.
+- **Sağlam sonuç 2:** Sürekli aralık pencerede yoğuşma tüm BETA (1–10) ve ALPHA (0,03–0,09) kombinasyonlarında **0 saat**, tepe BN %64–70; ama kuruma 6,5–14,5 saat ve maliyet en yüksek.
+- **Sağlam olmayan sonuç:** "Her saat 10 dk" için yoğuşma süresi parametreye bağlı: merkez değerde 0 saat, ama α=0,09 (hızlı kuruma) ve β=1'de **1,9–5,3 saat** (tepe BN %78–86). Yani bu stratejinin yeterli olup olmadığı, yalnızca modele güvenilerek söylenemez; **bu tam olarak α ve β'nın ölçülmesinin gerekçesidir.**
+
+### 6.2 Diğer bölgeler (yalnızca senaryo; İstanbul dışında ölçüm yok)
 
 | Bölge-benzeri | Strateji | Kuruma (h) | Tepe BN | Yoğuşma (h) f=.65 / .80 | Ek ısı kaybı |
 |---|---|---|---|---|---|
-| Marmara (+5,2 °C) | Pencere kapalı | >24 | %93 | 22,7 / 20,3 | 0 |
-| | Aralık, sürekli (ACH 2) | 8,7 | %62 | 0 / 0 | 6,2 kWh ≈ 6,8 TL |
-| | Her saat 10 dk tam aç | 10,5 | %72 | 0,1 / 0 | 3,4 kWh ≈ 3,8 TL |
-| | Kapalı + nem alıcı (0,3 kg/h) | 8,3 | %62 | 0 / 0 | elektrik ayrı |
-| İç Anadolu (−0,6 °C) | Pencere kapalı | 22,7 | %90 | 22,9 / 20,7 | 0 |
-| | Aralık, sürekli | 7,3 | %54 | 0 / 0 | 8,6 kWh ≈ 9,5 TL |
-| | Her saat 10 dk tam aç | 8,7 | %67 | 2,4 / 0 | 4,8 kWh ≈ 5,3 TL |
-| Doğu Anadolu (−4,3 °C) | Pencere kapalı | 19,9 | %89 | 23,1 / 21,0 | 0 |
-| | Aralık, sürekli | 6,8 | %52 | 0 / 0 | 10,1 kWh ≈ 11,2 TL |
-| | Her saat 10 dk tam aç | 8,1 | %65 | 4,6 / 0 | 5,7 kWh ≈ 6,3 TL |
+| Marmara (+5,2 °C) | Kapalı | >24 | %93 | 22,7 / 20,3 | 0 |
+| | Aralık, sürekli | 8,7 | %62 | 0 / 0 | 6,2 kWh ≈ 10,5–11,5 TL |
+| | Her saat 10 dk | 10,5 | %72 | 0,1 / 0 | 3,4 kWh ≈ 5,9–6,5 TL |
+| İç Anadolu (−0,6 °C) | Kapalı | 22,7 | %90 | 22,9 / 20,7 | 0 |
+| | Aralık, sürekli | 7,3 | %54 | 0 / 0 | 8,6 kWh ≈ 14,6–16,1 TL |
+| | Her saat 10 dk | 8,7 | %67 | 2,4 / 0 | 4,8 kWh ≈ 8,2–9,0 TL |
+| Doğu Anadolu (−4,3 °C) | Kapalı | 19,9 | %89 | 23,1 / 21,0 | 0 |
+| | Aralık, sürekli | 6,8 | %52 | 0 / 0 | 10,1 kWh ≈ 17,2–19,0 TL |
+| | Her saat 10 dk | 8,1 | %65 | 4,6 / 0 | 5,7 kWh ≈ 9,6–10,6 TL |
 
-**Okuma (nitel, duyarlılık testinde sağlam):**
-1. Kapalı odada bir yük çamaşır, modelde odayı neredeyse doyuruyor ve yalıtımsız köşede 20+ saat yoğuşma üretiyor.
-2. Sürekli aralık pencere en hızlı ve en güvenli, ama ısı kaybı en yüksek (bir yük için ~7–11 TL, Nisan 2026 gaz tarifesiyle).
-3. "Her saat 10 dk" yarı maliyetle çalışıyor, ancak soğuk bölgelerde yalıtımsız köşede yoğuşma saatleri kalıyor.
-4. **En iyi strateji bölgeye, odaya ve duvar yalıtımına (f_Rsi) bağlı; bu yüzden ölçüm gerekiyor.** Bu, projenin gerekçesidir.
+**Okuma (nitel):**
+1. Kapalı odada bir yük çamaşır, modelde odayı neredeyse doyuruyor ve yalıtımsız köşede 18+ saat yoğuşma üretiyor; İstanbul dahil bütün senaryolarda ve duyarlılık aralığında.
+2. Sürekli aralık pencere her senaryoda yoğuşmayı önlüyor ama ısı kaybı en yüksek: İstanbul'da bir yük için ~9–10 TL, soğuk bölgelerde ~15–19 TL.
+3. "Her saat 10 dk" maliyeti yaklaşık yarıya indiriyor; ancak yoğuşmayı önleyip önlemediği parametrelere ve bölgeye bağlı (İstanbul'da sınırda, Doğu Anadolu'da yoğuşma kalıyor).
+4. **En iyi strateji iklime, odaya ve duvar yalıtımına (f_Rsi) bağlı; bu yüzden ölçüm gerekiyor.** Bu, projenin gerekçesidir. Bu bir model çıktısıdır; tersi gerçek veride çıkabilir ve bu da bulgu olur.
 
-**Duyarlılık (Marmara-benzeri):** G_diğer=0,02 → taban BN %43, kapalı oda tepe %88; BETA 1–10 ve ALPHA 0,03–0,09 aralığında nitel sonuç değişmedi (kapalı: tepe %88–95; aralık pencere: %59–68). Sayısal değerler parametreye bağlıdır.
-
-**Dikkat:** Bir yük başına ~7–11 TL ısı kaybı ile kurutma makinesi elektriği (yük başına kWh değeri bu çalışmada doğrulanmadı) aynı mertebede olabilir. Bu bir *hipotez*; E5 ve maliyet analizi ile test edilecek.
+**Dikkat:** Bir yük başına ~5–10 TL (İstanbul) ısı kaybı ile kurutma makinesi elektriği (yük başına kWh değeri bu çalışmada doğrulanmadı) aynı mertebede olabilir. Bu bir *hipotez*; E5 ve maliyet analizi ile test edilecek.
 
 ## 7. Sentetik kimliklendirilebilirlik kanıtı (H2'nin ön sınaması)
 
@@ -171,7 +205,7 @@ Havalandırmanın ek ısı kaybı: Q = 0,34·V·ΔACH·(T_iç − T_dış) [W] (
 
 ## 9. Deneyler
 
-**E0 – Ev envanteri ve sensör karakterizasyonu.** 5 evde: oda hacmi, pencere türü, ısıtma sistemi, çamaşır makinesi kapasitesi/devri, kurutma alışkanlığı, duvar yalıtımı (var/yok). Sensör kalibrasyonları. *(Pilot-0: donanım gelmeden mutfak terazisi ve ucuz termo-higrometre ile 3 gün elle kayıt; 7 Kasım kararına veri.)*
+**E0 – Ev envanteri ve sensör karakterizasyonu.** 3–5 evde (hepsi İstanbul): oda hacmi, pencere türü, ısıtma sistemi, çamaşır makinesi kapasitesi/devri, kurutma alışkanlığı, duvar yalıtımı (var/yok). Sensör kalibrasyonları. *(Pilot-0 = Kapı 0: donanım gelmeden mutfak terazisi ve ucuz termo-higrometre ile 3 gün elle kayıt; sınavlardan sonra 16–19 Kasım; fikrin kesin kararına veri. Protokol §11.)*
 
 **E1 – Kuruma kinetiği.** Standart yük (aynı pamuk havlu seti, aynı makine/devir). T, BN, hava hızı (fan açık/kapalı), asma yoğunluğu değişir. α, X_c ve alternatif yasaları (Lewis, Page) uydur. Çıktı: H1, kalan süre hatası.
 
@@ -202,24 +236,28 @@ Havalandırmanın ek ısı kaybı: Q = 0,34·V·ΔACH·(T_iç − T_dış) [W] (
 
 ---
 
-## 11. Takvim (9 hafta)
+## 11. Takvim (sınav haftaları dikkate alınmış; 7 çalışma haftası)
 
-Hedef: **28 Aralık'ta yükle**; tampon kalsın.
+**Varsayım:** Ekip 2–15 Kasım'da sınavda; proje işi **16 Kasım'da** başlar (sınav bitişi değişirse tablo kayar). Hedef: **28 Aralık'ta yükle**, son gün 4 Ocak 17:30.
+
+**Sınav haftalarında (2–15 Kas) ekipten iş beklenmez.** Bu depoda yapay zekâ destekli hazırlık yapılabilir: Pilot-0 protokol föyü, firmware iskeleti, ön kayıt taslağı, literatür taraması, parça listesi ve fiyat doğrulaması. *Opsiyonel (ekibin kararı):* ortak ucuz parçaların (ESP32, HX711, baskül hücreleri, kablo; tahmini ~700–1.000 TL, fiyat doğrulanmadı) sınav haftasında sipariş edilmesi kargo beklemesini ortadan kaldırır; Pilot-0 olumsuz çıkarsa kayıp küçüktür.
 
 | Hafta | Tarih | İş |
 |---|---|---|
-| 1 | 2–8 Kas | Pilot-0 (elle kayıt), E0 envanteri, sipariş, literatür (Türkçe + yabancı), ön kayıt taslağı, firmware iskeleti; **7 Kas: fikir kararı** |
-| 2 | 9–15 Kas | Kit montajı, yük hücresi/T-RH/CO₂ kalibrasyonu (E0) → **Kapı A** |
-| 3 | 16–22 Kas | E1 kuruma kinetiği (kontrollü oda), E3 bilinen kaynak |
-| 4 | 23–29 Kas | E2 (ACH_RH vs ACH_CO₂) 2 evde; veri hattı |
-| 5 | 30 Kas–6 Ara | 5 evde tekrar (E1/E2), E4 yüzey → **Kapı B** |
-| 6 | 7–13 Ara | Model uydurma, leave-one-home-out, öneri motoru |
-| 7 | 14–20 Ara | E5 A/B testi, E6 kullanılabilirlik, maliyet analizi |
-| 8 | 21–27 Ara | Rapor, grafikler, özet, ekler (etik formu) |
-| 9 | 28 Ara–3 Oca | Tampon, gönderim |
+| 0 | 2–15 Kas | Sınav. Yalnızca hazırlık (yukarıda), ekip işi yok |
+| 1 | 16–22 Kas | **Pilot-0** (16–18 Kas: bir yük çamaşır, mutfak terazisi + termo-higrometre, elle kayıt) → **Kapı 0 (19 Kas)**; kit montajı ve kalibrasyon (E0); 3 evin envanteri → **Kapı A (22 Kas)** |
+| 2 | 23–29 Kas | E1 kuruma kinetiği (kontrollü oda), E3 bilinen kaynak |
+| 3 | 30 Kas–6 Ara | E2 (ACH_RH vs ACH_CO₂) 2–3 evde, E4 yüzey → **Kapı B (6 Ara)** |
+| 4 | 7–13 Ara | Tekrar ölçümler, model uydurma, leave-one-home-out |
+| 5 | 14–20 Ara | Öneri motoru, E5 A/B (2 evde); E6 yalnızca etik formu hazırsa |
+| 6 | 21–27 Ara | Rapor, grafikler, özet, ekler |
+| 7 | 28 Ara–3 Oca | Tampon, gönderim |
 
-**Kapı A (2. hafta sonu):** Yük hücresi kararlılığı ve nem sensörü çapraz uyumu ön kayıttaki eşikte mi? Değilse donanım değişir.
-**Kapı B (5. hafta sonu):** ACH_RH, ACH_CO₂ ile ≥3 evde uyumlu mu? Değilse proje "kuruma tahmini + oda nem tepkisi + yoğuşma marjı" olarak daralır (H2 olumsuz sonuç olarak raporlanır; sentetik sonuç yine de bir bulgudur).
+**Kapı 0 (19 Kas, Pilot-0 sonrası):** Elle tartılan çamaşırın kütle–zaman eğrisi düzgün bir kuruma eğrisi veriyor mu (çıplak terazide ≥ ~1 L kayıp ölçülebiliyor mu) ve termo-higrometrede çamaşır asıldıktan sonra nem artışı görülüyor mu? **Evet → fikir #1 kesinleşir. Hayır/belirsiz → 22 Kas'a kadar #2'ye geçilir;** kalan süre ~6 hafta olduğundan #2 de donanım siparişi gerektirir ve çok sıkışıktır. Bu yüzden Kapı 0 bilerek kısa ve ucuz tutuldu.
+**Kapı A (22 Kas):** Yük hücresi kararlılığı ve nem sensörü çapraz uyumu ön kayıttaki eşikte mi? Değilse donanım değişir.
+**Kapı B (6 Ara):** ACH_RH, ACH_CO₂ ile ≥2–3 evde uyumlu mu? Değilse proje "kuruma tahmini + oda nem tepkisi + yoğuşma marjı" olarak daralır (H2 olumsuz sonuç olarak raporlanır; sentetik sonuç yine de bir bulgudur).
+
+**Süre sıkışırsa kapsam kesme sırası:** (1) E6 kullanılabilirlik testi (etik formu gerektirir) → (2) ev sayısı 3'e iner (hepsi İstanbul'da) → (3) E5 tek evde → (4) E3 yalnızca tek ev. Kuruma kinetiği (E1) ve ACH karşılaştırması (E2) projenin çekirdeği olduğundan kesilmez.
 
 ## 12. Riskler
 
@@ -228,11 +266,13 @@ Hedef: **28 Aralık'ta yükle**; tampon kalsın.
 | Yük hücresi sallanma, sıcaklık sürüklenmesi | Yüksek/Orta | Dört ayaklı platform, filtre, referans kütle, sıcaklık telafisi |
 | Nem sensörü gecikmesi ve ofseti | Orta/Orta | Tuz kalibrasyonu, ikili sensör, hızlı yanıt sensörü |
 | Gerçek odada tam karışma/sabit ACH varsayımı bozulur | Yüksek/Yüksek | Pencere-kapı olaylarını kaydet; parçalı ACH; model hatası analizi |
-| 5 evde aynı anda deney lojistiği | Orta/Orta | Dönüşümlü kit; standart protokol; hafif kit |
+| 3–5 evde deney lojistiği (hepsi İstanbul, trafik/yol süresi) | Orta/Orta | Dönüşümlü kit; standart protokol; hafif kit; en az 3 ev |
 | Ailelerin katılımı ve çamaşır yükü değişkenliği | Orta/Orta | Standart yük (aynı havlu seti); alışkanlık yükleri ayrı etiketlenir |
 | Hava sıcaklığı/ısıtma ayarları farklı | Orta/Orta | Her koşulu kaydet; modelde kontrol değişkeni |
 | "İyi bilinen modelin tekrarı" itirazı | Orta/Yüksek | Çamaşırın ölçülen kaynak olması + Türkiye verisi + karar motoru (§4) |
 | Teyitsiz rakamların rapora girmesi | Orta/Orta | §3.1 tablosu; kaynak doğrulama listesi |
+| Sınav nedeniyle kısa çalışma süresi (7 hafta), Pilot-0 olumsuzsa geri dönüş zamanı yok | Yüksek/Yüksek | Kısa ve ucuz Kapı 0; kapsam kesme sırası (§11); sınav haftalarında hazırlık (kod, protokol, ön kayıt) |
+| Gaz fiyatı ve iklim girdileri güncel/yerel değil (1950–2025 dönem, haber fiyatı) | Orta/Orta | Abone faturası ve MGM 1991–2020 normali; modeli parametreleştirilmiş tut, sonuçları aralık olarak ver |
 
 ## 13. Kurallar ve uyum (rehber ve çağrı metninden)
 
@@ -249,16 +289,22 @@ Hedef: **28 Aralık'ta yükle**; tampon kalsın.
 
 ## 15. Yapılacaklar
 
-- [ ] **Pilot-0 (1–6 Kas):** Mutfak terazisi + termo-higrometre ile 3 gün elle kayıt; 7 Kas kararı.
-- [ ] Beş evin envanteri (oda hacmi, pencere, ısıtma, makine devri, yalıtım).
+**Sınav haftaları (2–15 Kas): ekibin yapacağı iş yok.**
+
+- [ ] *(Hazırlık, bu depoda)* Pilot-0 protokol föyü, firmware iskeleti, ön kayıt taslağı, parça listesi/fiyat doğrulaması.
+- [ ] *(Opsiyonel, ekip kararı)* Ortak ucuz parçaların siparişi (§11).
+- [ ] **Pilot-0 (16–18 Kas):** Mutfak terazisi + termo-higrometre ile bir yük çamaşırın elle kaydı → **Kapı 0 (19 Kas)**.
+- [ ] **Pilot-0 ile birlikte dış (balkon) nemini de ölç;** İstanbul'un Ocak/Şubat nemi için güvenilir bir kaynak bulamadım (§3.4).
+- [ ] Üç evin envanteri (oda hacmi, pencere, ısıtma, makine devri, yalıtım). *"Kaç evde kışın çamaşır içeride asılıyor?" bilgisini ekip bilmiyor; envanterle öğrenilir.*
+- [ ] *(İsteğe bağlı)* Sınıfta 5 soruluk anonim form (kışın çamaşır içeride mi asılıyor, kurutma makinesi var mı, ısıtma tipi, bina yaşı). Hedef kitle iddiasını İstanbul verisiyle destekler. **Kişisel veri toplanmayacak; okul/danışman onayı ve etik formu gerekip gerekmediği danışmanla netleştirilmeli.**
 - [ ] Türkçe + yabancı literatür taraması (Google Scholar/ULAKBİM): "laundry as moisture source", "ventilation rate from moisture balance", "asılı çamaşır kuruma kinetiği", "TS EN ISO 13788".
-- [ ] MGM il bazlı Kasım–Şubat sıcaklık ve nem normalleri; hangi illerde olunduğunu belirle.
-- [ ] EPDK/BOTAŞ güncel tarifeleri; kurutma makinesi yük başı enerji (üretici etiketi).
+- [ ] MGM İstanbul **1991–2020** normali ve aylık nem ("İllere ait mevsim normalleri" sayfası veya MEVBİS talebi); şu an elimizdeki 6,8 °C 1950–2025 dönemidir.
+- [ ] **Abone faturasından güncel gaz TL/m³** (vergiler dahil) ve kurutma makinesi yük başı kWh (üretici etiketi).
 - [ ] TS 825 bölge listesi ve TS EN ISO 13788 numarası.
-- [ ] Parça fiyatları ve bulunabilirlik; sipariş.
+- [ ] Parça fiyatları ve bulunabilirlik.
 - [ ] Ön kayıt planı (hata eşikleri pilot sonrası).
-- [ ] 3 resmî öğrenciyi belirle; danışmanla hipotezleri gözden geçir.
-- [ ] Bilimsel etik formu ve onam metni.
+- [ ] TYBS başvurusu için 3 resmî öğrenciyi belirle (Aralık başı); danışmanla hipotezleri gözden geçir.
+- [ ] Bilimsel etik formu ve onam metni (E6 yapılacaksa).
 
 ## 16. Kaynaklar
 
@@ -276,6 +322,11 @@ Hedef: **28 Aralık'ta yükle**; tampon kalsın.
 - ISO 13788:2012: <https://www.iso.org/standard/51615.html>
 - MGM Ocak 2026 değerlendirmesi: <https://www.mgm.gov.tr/FILES/iklim/yillikiklim/2026/Ocak_Sicaklik_Yagis_Degerlendirmesi.pdf>
 - TS 825 derece-gün bölgeleri (METU): <https://open.metu.edu.tr/handle/11511/50741>
+- MGM İstanbul il istatistikleri (1950–2025): <https://www.mgm.gov.tr/Veridegerlendirme/il-ve-ilceler-istatistik.aspx?m=ISTANBUL>
+- BOTAŞ kasım/aralık 2026 konut limitleri (İstanbul 136,01 / 259,35 m³): <https://www.tgrthaber.com/ekonomi/botas-dogal-gaz-tarifesini-guncelledi-kasim-ve-aralik-aylari-icin-il-bazli-tuketim-3368542>
+- Vergili kademe fiyatları (Ankara 16,84 / 25,69 TL; haber): <https://www.karar.com/guncel-haberler/ankaralilara-dogalgazda-vergili-kademe-soku-1-metrekup-gazin-fiyati-25-2040128>
+- Vergili kademe-1 fiyatı 17,88 TL (haber, doğrulanmadı): <https://www.hisse.net/haber/kombiyi-acanlar-dikkat-o-tarife-ilk-kez-uygulaniyor-fatura-2-katina-cikabilir-99572>
+- İstanbul bina stoku (818 bin+ bina 2000 öncesi; İBB–Kandilli 2020, haber): <https://www.timeturk.com/genel/istanbul-da-eski-binalar-en-cok-hangi-ilcede-2000-oncesi-binalar-en-fazla-hangi-ilcede/haber-1760742>
 - Enerji zammı Nisan 2026: <https://tr.euronews.com/2026/04/03/elektrik-ve-dogal-gaza-yuzde-25-zam>
 - Elektrik tarifesi Nisan 2026: <https://uzmanpara.milliyet.com.tr/uzmanpara/elektrik-zammi-2026-nisanda-ne-kadar-oldu-elektrige-ne-kadar-zam-geldi-iste-yeni-tarife-7565631>
 - Evren (Webtekno): <https://www.webtekno.com/turkiye-yapay-zeka-platformu-evren-erisime-acildi-h225949.html>
