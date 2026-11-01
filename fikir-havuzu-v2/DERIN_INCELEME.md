@@ -1,5 +1,7 @@
 # Derin İnceleme — Finalist Fikirler (fizik hocasıyla, bilimsel + etkileyici, laboratuvar aleti yok, Kağıthane)
 
+> **GÜNCELLEME:** 17 adaylı tam liste ve karşılaştırma için bkz. `projeler/00_DIZIN.md`. Bu dosyadaki H → P01, G → P04, B → P12, D → P13.
+
 > **Tarih:** 1 Kasım 2026 · Önceki menü: `FIKIR_HAVUZU.md`. Bu dosya, ekibin son yanıtlarına göre adayları süzer ve en güçlülerini derinleştirir.
 > **İşaretler:** *doğrulandı* = kaynağı okudum; *haber/özet* = ikincil; *bulamadım* = aramamda çıkmadı ("yok" demek değil); *benzetim* = kendi sentetik hesabım, ölçüm değil.
 
