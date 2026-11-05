@@ -3,6 +3,8 @@
 **Hazırlanma:** 5 Kasım 2026 (Perşembe) · **Kurul teslimi:** 7 Kasım 2026 (Cumartesi sabahı) · **Başvuru son günü:** **13 Kasım 2026 Cuma, 17:30**
 **Ekip:** 4 öğrenci + 1 öğretmen (proje yürütücüsü) · **Bütçe sınırı (ekip):** 7.000 TL · **Konu:** serbest, fizik yalnızca sonda hafif bir ek
 
+> **GÜNCELLEME (6 Kasım): Ana öneri değişti.** Derin araştırma ve ekip bilgileri sonrası seçilen alt proje **"Mıknatıssız Kıble"** (86/100). Kurula sunulacak güncel karar: `SECIM_KIBLE.md`; 18 fikrin 100 puanlık puanlaması: `DERIN_ARASTIRMA.md`. Bu dosyadaki duman projesi artık 8. sırada (75/100). Kurallar ve bütçe bölümleri (§1–2) hâlâ geçerli.
+
 > **Dürüstlük notu.** Aşağıdaki puanlar **benim yargımdır, TÜBİTAK'ın puanı değildir.** 4006'da finalist/ödül yoktur (finalist kavramı 2204-A'ya aittir), bu yüzden "finalistlere göre" sıralama yapılamaz. Onun yerine TÜBİTAK'ın yayımladığı **gerçek değerlendirme ölçütünü** ve **gerçek ret/iade nedenlerini** kullandım. Her olgu için kaynak türü §9'da.
 
 ---
