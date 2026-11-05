@@ -17,9 +17,10 @@ Telefon pusulası mıknatıs gibi çalışır: Dünya'nın manyetik alanını ö
 
 | Ekipte olan | Bu projeye katkısı |
 |---|---|
-| Fizik öğretmeni | Danışman; manyetizma (FİZ.11.2) ve ışık-gölge doğrudan onun alanı |
-| Yıldız Teknik'te makine hocası (konu uzmanı) | Mekanik kıblenüma tasarımına "belirli ölçüde yardım" (kılavuzun izin verdiği) |
-| Osmanlıca bilen öğrenci | Osmanlı dönemi kıble kaynaklarını ve kıblenüma tablolarını okuyabilir (bilim tarihi bölümü) |
+| Fizik öğretmeni (danışman) | Manyetizma (FİZ.11.2) ve ışık-gölge doğrudan onun alanı |
+| Bir öğrencinin kuzeni: Yıldız Teknik mezunu, mekanik (**okul dışı, öğrenci değil**) | Kıblenüma mekaniğinde yalnızca **danışmanlık düzeyinde yardım**. Kılavuz: öğrenciler "danışman öğretmen ve konu uzmanından belirli ölçüde yardım alabilir", ancak **"destek alınan kişi belirtilmelidir"** (§5). Yapımı öğrenciler yapar; adı posterde "destek alınan kişi" olarak yazılır |
+| Osmanlıca bilen öğrenci | Osmanlı dönemi kıble kaynaklarını ve kıblenüma tablolarını okuyabilir |
+| Arapça bilen öğrenci | Bîrûnî ve klasik kıble hesap kaynakları (Arapça) |
 | Kod yazan yok | **Ürün mekanik.** Yazılım gerekmiyor; hesaplar çizelgeyle de yapılabiliyor |
 
 - **Benzerlik riski düşük:** Türkiye'de bu konuda öğrenci projesi bulamadım. 2204 bölge listelerinde Astronomi teması neredeyse boş (300 projede 1).
@@ -93,6 +94,8 @@ Telefon pusulasının bina içindeki kıble hatasının ortalaması, dağılım�
 
 ## 6. Malzeme ve maliyet
 
+> **7.000 TL hakkında (düzeltme):** Bu rakam tüm okul fuarının hazırlık desteği (7.000 TL) + alt proje başına pay (B: 1.150 TL; A: 750 TL). Okul 10+ alt projeli fuar kurduğu için sizin payınız yaklaşık **1.850 TL (B)** olur, 7.000 TL değil. Aşağıdaki liste bu paya sığacak şekilde yapıldı. Paranın dağılımı okul/yürütücü kararıdır (SSS md. 26: para alt projeler arasında serbestçe kullanılabilir); **yürütücüye "bize ne kadar ayırırsınız?" diye sorun.**
+
 Fiyatlar 5–6 Kasım itibarıyla **tahmindir**. Alışveriş zaten **Şubat 2027'deki sözleşmeden sonra** yapılacak (faturalar sözleşme tarihleri arasında olmalı; SSS md. 29); o zaman güncel fiyat bakılmalı.
 
 | Kalem | Tahmini TL | Not |
@@ -113,8 +116,8 @@ Telefonlar ekibin kendisinin; **kamera, bilgisayar, yazıcı alınmaz** (kabul e
 |---|---|
 | Ö1 — Ölçüm sorumlusu | Nokta listesi, telefon okumaları, kayıt çizelgesi |
 | Ö2 — Astronomi-hesap | Kıble saatleri, harita-duvar açıları, kadran eğrilerinin hesabı (çizelge programında) |
-| Ö3 — Tasarım-imalat | Güneş Kıblenüması v1/v2 (konu uzmanı makine hocasıyla) |
-| Ö4 — Analiz, poster, bilim tarihi | Grafikler, poster, Osmanlıca kaynaklar (Osmanlıca bilen öğrenci) |
+| Ö3 — Tasarım-imalat | Güneş Kıblenüması v1/v2 (gerekirse yukarıdaki konu uzmanından danışmanlık alarak, ama kendileri yaparak) |
+| Ö4 — Analiz, poster, bilim tarihi | Grafikler, poster, Osmanlıca ve Arapça kaynaklar (Osmanlıca ve Arapça bilen iki öğrenci birlikte) |
 
 **Yapay zekâ ve "öğrenci yapmalı" kuralı:**
 - Kılavuz şunu söylüyor: *"Alt proje öğrenciler tarafından yapılmalıdır. Öğrenciler, danışman öğretmen ve konu uzmanından belirli ölçüde yardım alabilir."*
