@@ -213,3 +213,12 @@ Her koşul ≥10 tekrar.
 - [İstanbul'da toplanma alanları incelemesi](https://avesis.iku.edu.tr/yayin/f4a34c51-ce5c-4415-92c9-2184c0522658/deprem-sonrasi-ilk-durak-istanbulda-toplanma-alanlarina-dair-bir-inceleme)
 
 **Hesaplar:** kıble azimutu ve güneş saatleri (kendi betiğim, NOAA basit güneş algoritması), manyetik sapma (pygeomag/WMM).
+
+---
+
+## DÜZELTME (6 Kasım akşam)
+
+- §6.1'deki "bina içinde ortalama ≈ 45° hata (MIT)" ifadesi **zayıf kanıt**: kaynak 2011 tarihli ikincil alıntı, PDF'ine erişemedim. Yeni çalışmalar yöntem ve cihaza göre 2°–20°+ bildiriyor. Güncel metin: `SECIM_KIBLE.md`.
+- §6.4'teki "İstanbul barajları 18 Ekim 2025'te %24,5" rakamını bu oturumda doğrulamadım; kaldırılmalı. Ekim 2026 değerleri (%38,06 → %52,43 → %53,8) haber kaynaklıdır.
+- Fikir 4–6'daki bütçe ve "TÜBİTAK payı" varsayımları geçersiz: destek henüz verilmedi, tutarı kesin değil. Ekibin üst sınırı 7.000 TL.
+- Güneş kıblenüması **yeni bir ürün değildir** (Osmanlı kıble göstergeli yatay güneş saatleri var). Yenilik ölçüm sorusundadır.
