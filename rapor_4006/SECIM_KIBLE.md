@@ -1,5 +1,7 @@
 # Seçilen Alt Proje: Mıknatıssız Kıble (6 Kasım akşam revizyonu)
 
+> **Durum notu (6 Kasım gece):** Daha geniş araştırma sonrası bu proje artık **finalistlerden biri** (77/100), tek aday değil. Üç finalist (ebru-çöven, rüzgâr-kesit, kıble) puanda eşit; karar ön denemelerle verilecek. Bkz. `FIKIR_PORTFOLYOSU.md` §5.
+
 **Çağrı:** 4006-B olasılığı yüksek (yürütücü doğrulamalı) · **Kurul:** 7 Kasım sabah · **Son başvuru:** 13 Kasım 17:30
 **Bütçe:** Ekibin üst sınırı **7.000 TL**; TÜBİTAK desteği **henüz verilmedi ve tutarı kesin değil**. Aşağıdaki hiçbir rakam "alınmış para" varsayımına dayanmaz. Dış kaynak (ödünç alet, üniversite, tanıdık) kullanılabilir.
 
