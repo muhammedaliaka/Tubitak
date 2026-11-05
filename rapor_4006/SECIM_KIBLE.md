@@ -94,7 +94,7 @@ Telefon pusulasının bina içindeki kıble hatasının ortalaması, dağılım�
 
 ## 6. Malzeme ve maliyet
 
-> **7.000 TL hakkında (düzeltme):** Bu rakam tüm okul fuarının hazırlık desteği (7.000 TL) + alt proje başına pay (B: 1.150 TL; A: 750 TL). Okul 10+ alt projeli fuar kurduğu için sizin payınız yaklaşık **1.850 TL (B)** olur, 7.000 TL değil. Aşağıdaki liste bu paya sığacak şekilde yapıldı. Paranın dağılımı okul/yürütücü kararıdır (SSS md. 26: para alt projeler arasında serbestçe kullanılabilir); **yürütücüye "bize ne kadar ayırırsınız?" diye sorun.**
+> **Bütçe notu:** Ekibin bu proje için koyduğu üst sınır **7.000 TL**; plan bunun çok altında (aşağıdaki liste). Ayrı bir bilgi: TÜBİTAK'ın 7.000 TL'si **tüm okul fuarı** için hazırlık desteğidir (+ alt proje başına B: 1.150 TL, A: 750 TL). 10 projeli bir fuarda ortalama pay yaklaşık 1.850 TL'dir ve para projeler arasında okulun/yürütücünün kararıyla paylaşılır (SSS md. 26). Payın üstündeki harcamanın kaynağı (diğer ekiplerin payı, okul, ekip) önceden netleştirilmeli; **yürütücüye "bu projeye ne kadar ayırırsınız?" diye sorun.**
 
 Fiyatlar 5–6 Kasım itibarıyla **tahmindir**. Alışveriş zaten **Şubat 2027'deki sözleşmeden sonra** yapılacak (faturalar sözleşme tarihleri arasında olmalı; SSS md. 29); o zaman güncel fiyat bakılmalı.
 
