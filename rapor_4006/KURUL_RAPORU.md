@@ -211,3 +211,26 @@ Tek algılayıcı eşiğinin buhar ve toz koşullarındaki yanlış alarm oranı
 
 ---
 *Not:* Bu rapor yapay zekâ yardımıyla hazırlanmıştır; öğretmen ve ekip kurula sunmadan önce kendi gözleriyle doğrulamalı, özellikle §8'in 1–2. maddelerini.
+
+---
+
+## EK (6 Kasım) — "Bu proje hayatta ne işe yarar?" eleştirisine yanıt
+
+**Eleştiri haklı.** Programın resmî çağrı amaçlarından biri (13. dönem 4006-A çağrı metni, "Çağrı Amacı"): öğrencilerin *"günlük hayatta karşılaşılan problemlere sürdürülebilir ve yenilikçi çözümler geliştirmeleri."* Saf "ölç ve raporla" kurgusu bu maddede (ölçüt C5) zayıf kalır. Ayrıca çağrı, alt projenin öğrencilerin **kendi merak ve fikrinden** çıkmasını şart koşuyor (md. h); yani yalnızca bir veri toplama ödevi gibi görünmesi de risk.
+
+**Düzeltme:** Proje türünü **Tasarım** yapın ve çıktıyı bir ürün/tasarım kuralı yapın:
+- **Ad:** "Buhara ve Toza Dayanıklı Düşük Maliyetli Duman Uyarı Düğümü: Tasarım ve Yanlış Alarm Testi"
+- **Çözülen gündelik problem:** okul mutfağı, kantin, laboratuvar, yurt/pansiyon banyosu gibi buhar ve tozun sık olduğu yerlerde duman alarmı sürekli yanlış çalar; insanlar alarmı devre dışı bırakır ya da pili çıkarır. Bu gerçek bir güvenlik sorunudur.
+- **Ürün:** ≈1.500 TL'lik çalışan düğüm (ESP32 + sensörler) + **ölçümle bulunmuş eşik/kural seti** + poster (hangi koşulda ne kadar yanlış alarm kaldı).
+- **Test olarak ölçüm:** önceki yöntem aynen kalır; artık ölçüm, ürünün *doğrulamasıdır*.
+- **Alarm sadece yerel** (LED/buzzer). 112 araması, itfaiye bildirimi, "yapay zekâ sesi" **yok** (yanlış ihbar riski).
+
+**Dürüst sınırlar:** Ticari dedektörler var; bu düğüm onların yerine geçmez. İddia: "ucuz sensörlerle yanlış alarm şu kadar azaltılabilir" (ölçülmüş sayı). Bu iddia ölçümle çıkmazsa sonuç olarak yazılır. 4006 jürisi ticari ürün değil, öğrencilerin bilimsel süreci ve problem-çözümünü puanlar.
+
+**Başvuru metinlerine etkisi:** Amaç cümlesine "…bir çözüm tasarlamak" ifadesi eklenir; yöntem cümlesinde "tasarlanacak düğüm test edilecektir" yazılır. 4006-B'de Tasarım türü geçerlidir.
+
+## EK — Okulun TÜBİTAK geçmişi (araştırma sonucu)
+
+- **Puan bulunamadı.** TÜBİTAK'ın kurum bazlı puanı kamuya yayımladığına dair bir kaynak bulamadım; sonuç duyurularında "desteklenen projeler listesi" var, puan sütunu olduğunu doğrulayamadım.
+- Bulunan: [Kağıthane İlçe MEM sayfası](https://kagithane.meb.gov.tr/www/ekrem-cevahir-anadolu-imam-hatip-lisesi-quottubitak-4006-bilim-fuariquot-kaymakamimiz-sayin-niyazi-erten-ilce-mudurumuz-zekeriya-postaci-ve-misafirlerin-katilimiyla-gerceklesti/icerik/1696): okulun TÜBİTAK-4006 Bilim Fuarı (sayfa tarihi 16.06.2024; proje sayısı/puan yazmıyor). [2017 haberi](https://hasbahcegazetesi.com/ekrem-cevahir-anadolu-imam-hatip-lisesi-proje-okulu-oldu/): okul Fen ve Sosyal Bilimler Proje Okulu olmuş. 
+- Okulun kendi fuar dosyası (başvuru sonucu, sözleşme, sonuç raporu) yürütücü öğretmenin bilimiz hesabında durur; **puanı oradan görmek en kesin yoldur.**
